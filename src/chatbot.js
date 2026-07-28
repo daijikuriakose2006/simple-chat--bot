@@ -7,14 +7,17 @@ async function getReply(userMessage, history = []) {
   const local = matchRule(userMessage);
   if (local) return local;
 
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY || process.env.API_KEY;
+  const baseURL =
+    process.env.OPENAI_BASE_URL || process.env.AI_BASE_URL || "https://api.openai.com/v1";
+  const endpoint = `${baseURL.replace(/\/$/, "")}/chat/completions`;
+
   if (!apiKey || apiKey === "your_key_here") {
     return "Hmm, I'm not sure. Try 'help' or ask something else!";
   }
 
-
   try {
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
