@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBuddy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header-content">
+          <div class="avatar">🤖</div>
+          <div>
+            <h1>ChatBuddy</h1>
+            <p class="subtitle">Your friendly conversational assistant</p>
+          </div>
+        </div>
+        <span id="status-badge" class="status-badge">Online</span>
+      </header>
+
+      <main id="chat-box" class="chat-box" aria-live="polite">
+        <div class="message bot">
+          <div class="bubble">
+            Hi! I'm ChatBuddy 👋 How can I help?
+          </div>
+        </div>
+      </main>
+
+      <footer class="input-area">
+        <form id="chat-form" class="chat-form">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Type your message..."
+            autocomplete="off"
+            aria-label="Your message"
+            maxlength="1000"
+          />
+          <button type="submit" id="send-btn" aria-label="Send message">
+            Send
+          </button>
+        </form>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

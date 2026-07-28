@@ -1,0 +1,19 @@
+{
+  "name": "chatbuddy",
+  "version": "1.0.0",
+  "description": "A friendly conversational chatbot with rule-based replies and optional AI fallback",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["chatbot", "express", "nodejs"],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
