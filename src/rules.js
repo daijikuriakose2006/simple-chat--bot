@@ -13,7 +13,7 @@ const rules = [
   },
   {
     pattern: /\b(help|what can you do|what do you do)\b/i,
-    response: "I chat, answer questions, and tell jokes. Just ask!",
+    response: "I chat and answer questions. Just ask!",
   },
   {
     pattern: /\b(thank you|thanks|thx|appreciate it)\b/i,
